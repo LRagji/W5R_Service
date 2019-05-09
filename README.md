@@ -29,7 +29,7 @@ Endpoint for Posting list of cities:
 #### Request
 ```
 POST /v1/weather [multipart/form-data]
-Content-Disposition name="input.txt"
+Content-Disposition citylist="input.txt"
 ```
 #### Response
 |Response Code   |  Description |
