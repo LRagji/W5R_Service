@@ -1,0 +1,28 @@
+{
+  "name": "w5r_service",
+  "version": "0.0.1",
+  "description": "Weather service",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LRagji/W5R_Service.git"
+  },
+  "keywords": [
+    "w5r"
+  ],
+  "author": "Laukik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LRagji/W5R_Service/issues"
+  },
+  "homepage": "https://github.com/LRagji/W5R_Service#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}
