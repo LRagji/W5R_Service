@@ -4,7 +4,8 @@
 ## Installation
 1. Install Latest Node runtime from here[Node LTS](https://nodejs.org/en/)
 2. Run `npm install` in the root of the solution folder.
-3. Run `npm run` to start the service; after which you should see application running in your console.
+3. Run `npm run start` to start the service; after which you should see application running in your console.
+4. Run `npm run test` to run test suite.
 
 ## Executing the API
 1. Default the service is configured to run at port 3000
