@@ -1,5 +1,8 @@
+const fs = require('fs');
+const readline = require('readline');
+
 function GenerateErrorObject(message) {
-    return { "error_description": message };
+    return { "Status": "Error", "error_description": message };
 }
 
 module.exports = {
