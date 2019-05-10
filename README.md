@@ -7,6 +7,10 @@
 3. Finally all the info is saved into files names as timestamp.
 4. Client finally makes call to results api to check if the task was completed sucessfully.
 
+## Design Feature Highlights
+1. Complete async design(No holding up of precious i/o resources) ie:Able to achive high RPM.
+2. Input File Stream reading, which allows more RPM with lower memory footprint.
+
 ## Failure modes
 |Mode   |Impact   |Remediation   |
 |---|---|---|
@@ -37,7 +41,21 @@ Content-Disposition citylist="input.txt"
 | 202  | Request sucessfully accepted. Location header will have result id |
 | 400  | Invalid file. |
 | 413  | File is larger than allowed limit.  |
-
+Accepted:
+```JSON
+{
+    "Status": "Accepted",
+    "Total Cities": 10,
+    "Result Location": "/v1/results/zj0JwZOcS"
+}
+```
+Error:
+```JSON
+{
+    "Status": "Error",
+    "error_description": "Cannot find following cities:Kochin"
+}
+```
 #### Request
 ```
 GET /v1/results/{id}
@@ -45,11 +63,25 @@ GET /v1/results/{id}
 #### Response
 |Response Code   |  Description |
 |---|---|
-| 204  | Requested task was completed successfully |
+| 404  | Requested result id doesnt exists |
 | 200  | Requested task failed look into the response body for further details. |
+Processing:
 ```JSON
 {
-    "error_description":""
+    "Status": "Processing"
+}
+```
+Completed:
+```JSON
+{
+    "Status": "Completed"
+}
+```
+Error:
+```JSON
+{
+    "Status": "Error",
+    "error_description": "Cannot find following cities:Kochin"
 }
 ```
 ## Implemantation Details:
