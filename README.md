@@ -12,6 +12,7 @@
 2. Input File Stream reading, which allows more RPM with lower memory footprint.
 3. Parallel calls for query data saving time.
 4. Configurable batch size for parallel data.
+5. Cached Updates to reduce network traffic as weather data is only updated ever 10 mins [Weather API docs](https://openweathermap.org/appid#use)
 
 ## Failure modes
 |Mode   |Impact   |Remediation   |
