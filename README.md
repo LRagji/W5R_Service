@@ -10,6 +10,8 @@
 ## Design Feature Highlights
 1. Complete async design(No holding up of precious i/o resources) ie:Able to achive high RPM.
 2. Input File Stream reading, which allows more RPM with lower memory footprint.
+3. Parallel calls for query data saving time.
+4. Configurable batch size for parallel data.
 
 ## Failure modes
 |Mode   |Impact   |Remediation   |
