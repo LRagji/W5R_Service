@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "npx mocha 'test/*.js' --timeout 10000",
-    "start": "node server.js"
+    "start": "node server.js 3500 aa69195559bd4f88d79f9aadeb77a8f6"
   },
   "repository": {
     "type": "git",

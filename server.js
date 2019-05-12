@@ -4,13 +4,13 @@ const utils = require('./src/utilities');
 const NodeCache = require("node-cache");
 const shortid = require('shortid');
 const workerType = require('./src/worker');
-const asyncWorker = new workerType("aa69195559bd4f88d79f9aadeb77a8f6");
+const asyncWorker = new workerType(process.argv[3]);
 const OngoingTasks = new NodeCache();
 const InputFileparserType = require('./src/inputFileparser');
 const CityIdMap = new Map(require('./src/cityMap').Serialized);
 const parser = new InputFileparserType();
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.argv[2] || 3000;
 const handleUploads = multer({ dest: "uploads/" })
 const OneMinuteTimeout = 60;
 

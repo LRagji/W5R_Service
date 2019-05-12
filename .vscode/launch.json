@@ -21,7 +21,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\server.js"
+            "program": "${workspaceFolder}\\server.js",
+            "args":["4000","aa69195559bd4f88d79f9aadeb77a8f6"]
         }
     ]
 }
